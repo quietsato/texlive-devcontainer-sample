@@ -1,0 +1,27 @@
+\documentclass[pdflatex,ja=standard]{bxjsarticle}
+\begin{document}
+
+\section{日本語が打てます}
+あいうえお。
+かきくけこ。
+文献からの引用\cite{9999999999}。\newline
+あいうえお。
+かきくけこ。
+
+\section{Math Equation Test}
+
+$$ \sum^{n}_{k=1} = \frac{n(n+1)}{2} $$
+
+$$
+    \limsup_{n \to \infty} X_n
+        = \bigcap_{m \ge 1} \left(
+            \bigcup_{n \ge m} X_n
+        \right)
+$$
+
+\include{texes/tex01.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{refs/ref01}
+
+\end{document}
