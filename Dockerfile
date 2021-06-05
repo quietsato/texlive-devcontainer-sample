@@ -1,5 +1,12 @@
 FROM texlive/texlive
 
+RUN apt update \
+    && apt install -y build-essential \
+    && cpan Unicode::GCString \
+    && cpan App::cpanminus \
+    && cpan YAML::Tiny \
+    && perl -MCPAN -e 'install "File::HomeDir"'
+
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
